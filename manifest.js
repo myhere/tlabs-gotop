@@ -1,5 +1,5 @@
 TLabs.addFeature({
-	name: 'Ë«»÷»Ø¶¥²¿',
+	name: 'åŒå‡»å›é¡¶éƒ¨',
 	version: '1.0',
 	mods: [{
 		matches: '*.taobao.com|*.tmall.com',
