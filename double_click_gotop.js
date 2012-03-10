@@ -19,9 +19,11 @@ define(function(require) {
 
   function dbClickHandler(evt) {
     var target = evt.target;
-    if (target.tagName !== 'BODY') {
-      return;
-    }
+    // if (target.tagName !== 'BODY') {
+    //   return;
+    // }
+    
+    // TODO: 只处理点击两侧
 
     try {
       doc.body.scrollTop = 0;
