@@ -2,7 +2,6 @@
  * Author: linqian.zl@taobao.com
  */
 define(function(require) {
-//LabsJS.define(function(require) {
 
   var doc = document;
 
@@ -19,16 +18,32 @@ define(function(require) {
 
   function dbClickHandler(evt) {
     var target = evt.target;
-    // if (target.tagName !== 'BODY') {
-    //   return;
-    // }
+
+    if (!isClickableTarget(target)) {
+      return;
+    }
     
-    // TODO: 只处理点击两侧
 
     try {
       doc.body.scrollTop = 0;
       doc.documentElement.scrollTop = 0;
     } catch(e) {}
+  }
+
+  function isClickableTarget(ele) {
+    // TODO: 只处理点击两侧
+
+    // 只处理到 html 路径小于 4 的节点双击
+    var LEN_2_HTML = 4;
+    
+    var htmlEle = doc.documentElement;
+    var cnt = 0;
+
+    while(ele != htmlEle && (ele = ele.parentElement)) {
+      ++cnt;
+    }
+
+    return cnt < LEN_2_HTML;
   }
 
   function init() {
