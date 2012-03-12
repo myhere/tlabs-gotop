@@ -34,7 +34,7 @@ define(function(require) {
     // TODO: 只处理点击两侧
 
     // 只处理到 html 路径小于 4 的节点双击
-    var LEN_2_HTML = 4;
+    var LEN_2_HTML = 5;
     
     var htmlEle = doc.documentElement;
     var cnt = 0;
@@ -52,5 +52,3 @@ define(function(require) {
 
   init();
 });
-
-//@ sourceURL=double_click_gotop.js
